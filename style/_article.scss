@@ -1,0 +1,13 @@
+@import '_constants',
+'_mixins';
+article {
+    >h1:first-child,
+    >h2:first-child,
+    >h3:first-child,
+    >h4:first-child,
+    >h5:first-child,
+    >h6:first-child {
+        padding-top: $articlePaddingTop;
+        margin-bottom: $articleMarginBottom;
+    }
+}

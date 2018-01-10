@@ -1,0 +1,25 @@
+@import '_constants',
+'_mixins';
+[tooltip]:before {
+    font-family: $medium-primary-font;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+    background-color: $tooltipBackgroudColor;
+    color: $tooltipColor;
+    content: attr(tooltip);
+    font-size: $tooltipFontSize;
+    visibility: hidden;
+    opacity: 0;
+    padding: $tooltipVerticalPadding $tooltipHorizontalPadding;
+    margin-right: 10px;
+    position: absolute;
+    right: 100%;
+    white-space: nowrap;
+}
+
+[tooltip]:hover:before,
+[tooltip]:hover:after {
+    visibility: visible;
+    opacity: 0.9;
+}

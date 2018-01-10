@@ -1,0 +1,7 @@
+@import '_constants',
+'_mixins';
+span {
+    color: $textColor;
+    padding: $spanPadding;
+    margin-right: $spanMargin;
+}

@@ -1,0 +1,27 @@
+@import '_constants',
+'_mixins';
+ul,
+ol {
+    @include font-family($primary-font);
+    @include font-size(1.6);
+    list-style-type: none;
+    padding: 0 16px;
+    margin: 0;
+    li {
+        padding: 8px 0;
+        display: flex;
+        align-items: center;
+        div:first-of-type,
+        a:first-of-type {
+            div:nth-child(2) {
+                @include font-size(1.4);
+                color: $labelColors;
+            }
+        }
+        i,
+        span {
+            padding: 0 8px;
+            text-align: center;
+        }
+    }
+}

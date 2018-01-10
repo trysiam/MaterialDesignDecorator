@@ -1,0 +1,73 @@
+@import '_constants',
+'_mixins';
+body>header:first-of-type {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0 16px;
+    background: $primaryColor;
+    color: $headerTextColor;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .26);
+    &.i-am-shrinked {
+        height: 64px;
+    }
+    * {
+        color: $headerTextColor;
+    }
+    &>span,
+    &>h1 {
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+        width: 1160px;
+        white-space: nowrap;
+        padding: 60px 0 0;
+        height: 192px;
+        transition: height 0.02s linear;
+        -moz-transition: height 0.02s linear;
+        -webkit-transition: height 0.02s linear;
+        -o-transition: height 0.02s linear;
+        &.default-document-title {
+            @include default-document-header();
+        }
+        &.small-document-title {
+            @include small-document-header();
+        }
+    }
+    &>nav {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 64px;
+        top: 0;
+        left: 0;
+        right: 0;
+        &>i {
+            vertical-align: bottom;
+        }
+        i:last-of-type {
+            margin-right: 0;
+        }
+        &>ul:first-of-type,
+        &>ol:first-of-type {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            li {
+                display: inline;
+                a {
+                    padding: 0 8px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@import '_constants',
+'_mixins';
+form {
+    overflow: hidden;
+    &>div:last-child {
+        float: right;
+        >button:last-child {
+            background: $secondaryColor;
+            color: $headerTextColor;
+            &:hover {
+                background: $darkerSecondaryColor;
+            }
+        }
+    }
+}

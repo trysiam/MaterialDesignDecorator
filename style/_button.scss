@@ -1,0 +1,160 @@
+@import '_constants',
+'_mixins';
+button,
+button.flat {
+    @include font-size(1.4);
+    @include line-height(3.6);
+    height: 36px;
+    min-width: 88px;
+    font-weight: 500;
+    display: inline-block;
+    margin: 24px 4px 0;
+    padding: 0 8px;
+    overflow: visible;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: inherit;
+    letter-spacing: 0.03em;
+    border: none;
+    border-radius: 2px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    outline: none;
+}
+
+button {
+    // Raised buttons
+    &.raised {
+        background-color: $raisedBtnColor;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    }
+    &.raised:hover {
+        background-color: $hoverRaisedBtnColor;
+    }
+    &.raised:active,
+    &.raised:focus {
+        background: $hoverRaisedBtnColor;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    &.raised[disabled],
+    &.raised[disabled]:hover,
+    &.raised[disabled]:active,
+    &.raised[disabled]:focus {
+        background: $disabledRaisedBtnColor;
+        color: $disabledBtnColor;
+        box-shadow: 0;
+        cursor: default;
+    }
+    // Floating Action Button
+    &.action {
+        display: inline-block;
+        position: fixed;
+        bottom: 24px;
+        right: 24px;
+        min-width: 56px;
+        width: 56px;
+        height: 56px;
+        z-index: 4000;
+        -webkit-transition: all .1s ease-out;
+        transition: all .1s ease-out;
+        >i {
+            padding: 16px;
+            background-color: $floatingActionBtnColor;
+        }
+    }
+    &.mini-action {
+        display: block;
+        position: fixed;
+        right: -8px;
+        min-width: 40px;
+        width: 40px;
+        height: 40px;
+        -webkit-transition: all .1s ease-out;
+        transition: all .1s ease-out;
+        >i {
+            padding: 8px;
+            background-color: $miniFloatingActionBtnColor;
+        }
+    }
+    &.action,
+    &.mini-action {
+        padding: 0;
+        margin-top: 0;
+        >i {
+            box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+            border-radius: 50%;
+            color: #fff;
+        }
+    }
+    &.action:hover,
+    &.action:active,
+    &.action:focus,
+    &.mini-action:hover,
+    &.mini-action:active,
+    &.mini-action:focus {
+        background-color: transparent;
+        >i {
+            box-shadow: 0 0 8px rgba(0, 0, 0, .2), 0 5px 9px rgba(0, 0, 0, .4);
+        }
+    }
+}
+
+button[disabled]:hover,
+button[disabled]:active,
+button[disabled]:focus,
+button.flat[disabled]:hover,
+button.flat[disabled]:active,
+button.flat[disabled]:focus {
+    background-color: transparent;
+    cursor: default;
+}
+
+button:hover,
+button.flat:hover {
+    background: $focusBtnColor;
+}
+
+button:active,
+button:focus,
+button.flat:active,
+button.flat:focus {
+    background: $pressedBtnColor;
+}
+
+button[disabled],
+button.flat[disabled] {
+    color: $disabledBtnColor;
+}
+
+button,
+button.flat {
+    color: $textColor;
+}
+
+.fabs-container {
+    bottom: 0;
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 4000;
+    .action,
+    .mini-action {
+        position: relative;
+    }
+    .action {
+        -webkit-transition-delay: 25ms;
+        transition-delay: 25ms;
+        bottom: 0;
+        right: 0;
+    }
+    .mini-action {
+        opacity: 0;
+    }
+}
+
+.fabs-container:hover button:not(:last-child) {
+    opacity: 1;
+    margin-bottom: 15px;
+}

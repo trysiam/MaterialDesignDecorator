@@ -1,0 +1,7 @@
+@import '_constants',
+'_mixins';
+i {
+    color: $textColor;
+    padding: 8px;
+    margin-right: 16px;
+}

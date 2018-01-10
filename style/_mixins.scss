@@ -1,0 +1,136 @@
+@mixin font-size($size: 1.6) {
+    font-size: ($size * 10) + px;
+    font-size: $size + rem;
+}
+
+@mixin letter-spacing($spacing: 1.6) {
+    letter-spacing: ($spacing * 10) + px;
+    letter-spacing: $spacing + rem;
+}
+
+@mixin line-height($height: 1.6) {
+    line-height: ($height * 10) + px;
+    line-height: $height + rem;
+}
+
+@mixin font-family($font) {
+    font-family: $font, sans-serif;
+}
+
+@mixin checkbox-input-label-before() {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid $labelColors;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    box-sizing: border-box;
+}
+
+@mixin checkbox-input-checked-label-before() {
+    background: $primaryColor;
+    border-color: $primaryColor;
+}
+
+@mixin checkbox-input-checked-label-after() {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: $backgroundColor;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 $backgroundColor, 4px 0 0 $backgroundColor, 4px -2px 0 $backgroundColor, 4px -4px 0 $backgroundColor, 4px -6px 0 $backgroundColor, 4px -8px 0 $backgroundColor;
+    transform: rotate(45deg);
+}
+
+@mixin radio-input-label-before() {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    border: 2px solid $primaryColor;
+    border-radius: 100%;
+    -moz-border-radius: 100%;
+    background: $cardColor;
+}
+
+@mixin radio-input-label-after() {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: $primaryColor;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+@mixin default-document-header() {
+    @include font-size(5.6);
+    @include line-height(8.4);
+    @include letter-spacing(-0.05);
+    font-weight: 300;
+}
+
+@mixin small-document-header() {
+    @include font-size(1.8);
+    @include line-height(6.4);
+    font-weight: 400;
+    width: auto;
+    position: absolute;
+    top: 0;
+    height: 64px;
+    margin-left: 56px;
+    padding-top: 0;
+}
+
+@mixin header-1() {
+    @include font-size(4.5);
+    @include line-height(4.8);
+    @include letter-spacing(0);
+    font-weight: 300;
+}
+
+@mixin header-2() {
+    @include font-size(3.4);
+    @include line-height(4.0);
+    @include letter-spacing(0);
+    font-weight: 300;
+}
+
+@mixin header-3() {
+    @include font-size(2.4);
+    @include line-height(3.2);
+    @include letter-spacing(0);
+    font-weight: 300;
+}
+
+@mixin header-4() {
+    @include font-size(2.0);
+    @include line-height(2.8);
+    @include letter-spacing(0.05);
+    font-weight: 400;
+}
+
+@mixin header-5() {
+    @include font-size(1.5);
+    @include line-height(2.8);
+    @include letter-spacing(0.1);
+    font-weight: 400;
+}
+
+@mixin header-6() {
+    @include font-size(1.5);
+    @include line-height(2.4);
+    @include letter-spacing(0.1);
+    font-weight: 300;
+}

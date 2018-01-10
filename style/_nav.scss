@@ -1,0 +1,34 @@
+@import '_constants',
+'_mixins';
+body>nav:first-of-type {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 256px;
+    margin-bottom: 64px;
+    background: $appBarColor;
+    width: $navWidth;
+    max-width: $navWidth;
+    &.header-is-shrink {
+        margin-top: 64px;
+    }
+    &>ul,
+    &>ol {
+        height: 100%;
+        padding: 16px 0;
+        &>li {
+            padding: 8px 16px;
+            &>a {
+                width: 100%;
+                &>i,
+                &>span {
+                    color: $labelColors;
+                }
+            }
+            &:hover {
+                background-color: $focusBtnColor;
+            }
+        }
+    }
+}

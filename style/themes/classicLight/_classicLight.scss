@@ -1,0 +1,62 @@
+@import '../../_colors';
+$primaryColor: $blue-500;
+$fromPriamry7Color: $blue-700;
+$fromPriamry8Color: $blue-800;
+$secondaryColor: $pink-A200;
+$darkerSecondaryColor: $pink-A400;
+$statusBarColor: $grey-300;
+$appBarColor: $grey-100;
+$backgroundColor: $grey-50;
+$cardColor: $white;
+$textColor: $black;
+$headerTextColor: $white;
+
+/*
+* BUTTONS
+*/
+
+$focusBtnColor: rgba(153, 153, 153, 0.1);
+$pressedBtnColor: rgba(153, 153, 153, 0.4);
+$disabledBtnColor: rgba($black, 0.26);
+$raisedBtnColor: $grey-300;
+$hoverRaisedBtnColor: $grey-400;
+$disabledRaisedBtnColor: rgba($black, 0.12);
+$floatingActionBtnColor: $secondaryColor;
+$miniFloatingActionBtnColor: $fromPriamry7Color;
+
+/*
+* INPUTS
+*/
+
+$borderBottomColor: rgba($black, 0.42);
+$disabledInputText: rgba($black, 0.42);
+$hoverBottomColor: rgba($black, 0.87);
+
+/*
+* checkboxes, radio buttons
+*/
+
+$focusInputColor: rgba(25, 118, 210, 0.12);
+$checkMarkColor: $white;
+
+/*
+* LABELS
+*/
+
+$labelColors: rgba($black, 0.54);
+$disabledLabelColor: rgba($black, 0.42);
+
+/*
+* Tables
+*/
+
+$table-header-color: rgba($textColor, 0.54);
+$table-body-row-hover: $grey-200;
+$table-body-row-bottom: $grey-300;
+
+/*
+* Tooltip
+*/
+
+$tooltipBackgroudColor: $grey-700;
+$tooltipColor: $white;

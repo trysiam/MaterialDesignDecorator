@@ -1,0 +1,27 @@
+@import '_constants',
+'_mixins';
+details {
+    &>summary {
+        display: block;
+        outline: none;
+        cursor: pointer;
+        &::-webkit-details-marker {
+            display: none;
+        }
+        &>div {
+            padding: 20px 24px;
+            text-align: left;
+        }
+    }
+}
+
+details[open] {
+    &>summary {
+        &>div {
+            padding-bottom: 0;
+        }
+        &+p {
+            padding: 0 24px 20px;
+        }
+    }
+}

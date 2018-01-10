@@ -1,0 +1,54 @@
+@import '_constants',
+'_mixins';
+body>div.main-and-aside {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 1160px;
+    padding-top: 336px;
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: padding-top 0.02s linear;
+    -moz-transition: padding-top 0.02s linear;
+    -webkit-transition: padding-top 0.02s linear;
+    -o-transition: padding-top 0.02s linear;
+    >main {
+        padding-right: 24px;
+    }
+    &.menu-is-open {
+        padding-left: 150px;
+    }
+}
+
+body>main:first-of-type {
+    position: relative;
+    width: 1160px;
+    padding-top: 336px;
+    padding-bottom: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: padding-top 0.02s linear;
+    -moz-transition: padding-top 0.02s linear;
+    -webkit-transition: padding-top 0.02s linear;
+    -o-transition: padding-top 0.02s linear;
+    &.smaller-main-section {
+        padding-top: 224px;
+    }
+    &.menu-is-open {
+        padding-left: 150px;
+    }
+    &.no-header-at-all {
+        padding-top: 24px;
+    }
+    &.aside-exists {
+        order: 1;
+        flex: 1;
+    }
+}
