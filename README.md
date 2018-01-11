@@ -33,9 +33,9 @@ HTML5 | Material Design
 ```<button>``` | By default, it is mapped to flat button. If it's a direct child of the main tag, it'll convert to floating action button. If it's placed on the form, it'll map to raised button.
 ```<section>```, ```<article>``` | Default margins are specified for them, which provide the appropriate distance from their headers.
 ```<h1>```, ```<h2>```, ```<h3>```, ```<h4>```, ```<h5>```, ```<h6>``` | Their size and thickness is consistent with Material Design guidelines for typography.
-```<label></label><input type=text>```  | A default text field with a label.
-```<input type="checkbox" id="check" /> <label for="check"></label>``` | Checkbox with a label.
-```<input type="radio" id="foo" name="radio-group"/> <label for="foo"></label>``` | Radio button with a label.
+```<label></label><input type=text>```  | Material Design's text field with a label.
+```<input type="checkbox" id="check" /> <label for="check"></label>``` | Material Design's checkbox with a label.
+```<input type="radio" id="foo" name="radio-group"/> <label for="foo"></label>``` | Material Design's radio button with a label.
 ```<table>``` | Material Design's data table.
 
 ## Example
