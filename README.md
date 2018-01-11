@@ -55,11 +55,11 @@ For example, this code
 
     <!-- Material Design Decorator -->
     <link href="style/light_style.css" rel="stylesheet" type="text/css" id="pagestyle" />
-    <script type="text/javascript" src="js/script.js"></script>
-
+    <script src="js/script.js"></script>
 </head>
 
 <body>
+
     <header>
         <nav>
             <a><i class="material-icons">dehaze</i></a>
@@ -67,28 +67,54 @@ For example, this code
         </nav>
     </header>
 
-    <nav></nav>
+    <nav>
+        <ul>
+            <li><a href="#"><i class="material-icons">home</i>Home</a></li>
+            <li><a href="#"><i class="material-icons">build</i>About</a></li>
+            <li><a href="#"><i class="material-icons">phone</i>Contact</a></li>
+        </ul>
+    </nav>
 
     <main>
         <h1>Material Design</h1>
+        <p>Lorem ipsum dolor sit amet, maluisset dignissim reformidans cu vis, apeirian atomorum no sea. Lorem ipsum dolor sit amet, maluisset dignissim reformidans cu vis, apeirian atomorum no sea.</p>
         <section>
             <h2>Material Design</h2>
-            <article>Material Design</article>
+            <p>Vis augue elitr tantas ex, legimus nominavi te ius.</p>
+            <article>
+                <h3>Material Design</h3>
+                <p>Idque eripuit suscipiantur in cum, an vix tale summo reprehendunt, stet malis signiferumque qui ne.</p>
+            </article>
         </section>
+
+        <div>
+            <button><i class="material-icons" tooltip="Cloud">cloud</i></button>
+            <button><i class="material-icons" tooltip="Computer">computer</i></button>
+            <button><i class="material-icons" tooltip="Mouse">mouse</i></button>
+            <button><i class="material-icons" tooltip="TV">tv</i></button>
+            <button><i class="material-icons" tooltip="Add">add</i></button>
+        </div>
     </main>
 
-    <aside></aside>
+    <aside>
+        <a href="https://pl.wikipedia.org/wiki/Star_Wars:_Rebelianci" target="blank">
+            <img src="img/star_wars.jpg" />
+            <div>
+                <h6>Star Wars</h6>
+                <p>W galaktyce nastały mroczne czasy. Potężne Imperium ogarnia kolejne światy...</p>
+                <button>Show more</button>
+            </div>
+        </a>
+    </aside>
 
-    <footer>
-        Copyright 2017 Patrycja Karpińska
-    </footer>
+    <footer>Material Design</footer>
 </body>
 
 </html>
 ```
 
 produce:
-![](light_style.png)
+![](example.png)
 
 ## License
 
